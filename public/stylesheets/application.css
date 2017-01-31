@@ -23,6 +23,7 @@ header h2 {
   font-size: 16px;
   font-style: italic;
   color: #999;
+  padding: 5px;
 }
 
 #main {
@@ -35,18 +36,28 @@ header h2 {
 
 #add textarea {
   height: 30px;
-  width: 510px;
+  width: 97%;
   padding: 10px;
   border: 1px solid #ddd;
 }
 
 #add input {
   height: 50px;
-  width: 100px;
+  width: 100%;
   margin: -50px 0 0;
   border: 1px solid #ddd;
-  background: white;
+  background: #eaeaea;
 }
+
+#submit {
+  margin-top: 25px;
+}
+
+input[type="submit"]:hover {
+  border: 1px solid #ddd;
+  color: #000;
+}
+
 
 #edit textarea {
   height: 30px;
@@ -110,4 +121,8 @@ p {
 .links a {
   display: block;
   text-decoration: none;
+}
+
+small {
+  color: #999;
 }
