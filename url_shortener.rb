@@ -11,7 +11,6 @@ DataMapper::Model.raise_on_save_failure = true
 
 get '/' do
   @urls = Url.all
-  @title = 'All Urls'
   erb :index  
 end
 
@@ -25,6 +24,20 @@ end
 
 get '/:short_url' do 
 end
+
+# delete '/:id' do
+#   n = Note.get params[:id]
+#   n.destroy
+#   redirect '/'
+# end
+
+# get '/:id/complete' do
+#   n = Note.get params[:id]
+#   n.complete = n.complete ? 0 : 1 # flip it
+#   n.updated_at = Time.now
+#   n.save
+#   redirect '/'
+# end
 
 class Url
   include DataMapper::Resource

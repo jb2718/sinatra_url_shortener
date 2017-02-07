@@ -6,7 +6,7 @@
 <section id="add">
 	<form action="/" method="post">
 		<div>
-			<textarea name="original" placeholder="Your Long URL"></textarea>
+			<textarea name="original" placeholder="Paste Your Long URL Here"></textarea>
 		</div>
 		<div id="submit">
 			<input type="submit" value="Shorten">	
@@ -21,28 +21,3 @@
     </p>
   </article>
 <% end %>
-
-
-<!-- %h1.title TinyClone
-- unless @link.nil?
-  .success
-    %code= @link.url.original
-    has been shortened to 
-    %a{:href => "/#{@link.identifier}"}
-      = "http://tinyclone.saush.com/#{@link.identifier}"
-    %br
-    Go to 
-    %a{:href => "/info/#{@link.identifier}"}
-      = "http://tinyclone.saush.com/info/#{@link.identifier}"
-    to get more information about this link.
-- if env['sinatra.error']
-  .error= env['sinatra.error'] 
-%form{:method => 'post', :action => '/'}
-  Shorten this:
-  %input{:type => 'text', :name => 'original', :size => '70'} 
-  %input{:type => 'submit', :value => 'now!'}
-  %br
-  to http://tinyclone.saush.com/
-  %input{:type => 'text', :name => 'custom', :size => '20'} 
-  (optional)
-%p   -->
