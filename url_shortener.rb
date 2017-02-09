@@ -1,13 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require 'data_mapper'
-require 'sqlite3'
 require 'pry'
 
-
-DataMapper::Logger.new($stdout, :debug)
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/shorturl.db")
-DataMapper::Model.raise_on_save_failure = true
 
 get '/' do
   @urls = Url.all
@@ -84,5 +78,3 @@ end
 #     end
 #   end
 # end
-
-DataMapper.finalize.auto_upgrade!
